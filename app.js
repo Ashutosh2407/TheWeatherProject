@@ -2,6 +2,7 @@ const express = require("express");
 const https = require("https");
 const bodyParser = require("body-parser");
 const app = express();
+const sslRedirect = require('heroku-ssl-redirect').default
 
 require('dotenv').config()
 
@@ -35,7 +36,7 @@ app.post("/",function(req,res){
       res.send();
     })
   })
-})
+});
 
 
 
